@@ -1,0 +1,127 @@
+:root {
+  --primary: #5865F2;
+  --bg: #f9f9f9;
+  --text: #333;
+  --border: #ddd;
+}
+
+* {
+  box-sizing: border-box;
+  font-family: 'Segoe UI', Tahoma, sans-serif;
+}
+
+body {
+  margin: 0;
+  background: var(--bg);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  min-height: 100vh;
+  padding: 20px;
+}
+
+.container {
+  background: #fff;
+  padding: 40px;
+  border-radius: 16px;
+  box-shadow: 0 0 30px rgba(0, 0, 0, 0.05);
+  width: 100%;
+  max-width: 420px;
+  transition: all 0.3s ease;
+}
+
+h1 {
+  text-align: center;
+  margin-bottom: 30px;
+  color: var(--text);
+  font-size: 24px;
+}
+
+.input-group {
+  position: relative;
+  margin-bottom: 25px;
+}
+
+.input-group input {
+  width: 100%;
+  padding: 14px 10px;
+  border: 2px solid var(--border);
+  border-radius: 10px;
+  font-size: 16px;
+  background: #fff;
+  outline: none;
+  transition: 0.3s;
+}
+
+.input-group label {
+  position: absolute;
+  top: 14px;
+  left: 12px;
+  background: white;
+  padding: 0 5px;
+  color: #aaa;
+  font-size: 14px;
+  pointer-events: none;
+  transition: 0.3s;
+}
+
+.input-group input:focus,
+.input-group input:not(:placeholder-shown) {
+  border-color: var(--primary);
+}
+
+.input-group input:focus + label,
+.input-group input:not(:placeholder-shown) + label {
+  top: -10px;
+  left: 10px;
+  font-size: 12px;
+  color: var(--primary);
+}
+
+.submit-btn {
+  width: 100%;
+  padding: 14px;
+  background: var(--primary);
+  border: none;
+  color: white;
+  font-size: 16px;
+  border-radius: 10px;
+  cursor: pointer;
+}
+
+.submit-btn:hover {
+  background: #4752c4;
+}
+
+.footer {
+  text-align: center;
+  margin-top: 20px;
+  font-size: 13px;
+  color: #888;
+}
+
+@media screen and (max-width: 500px) {
+  .container {
+    padding: 25px;
+    border-radius: 12px;
+  }
+
+  h1 {
+    font-size: 20px;
+    margin-bottom: 20px;
+  }
+
+  .input-group input {
+    font-size: 14px;
+    padding: 12px 10px;
+  }
+
+  .submit-btn {
+    padding: 12px;
+    font-size: 15px;
+  }
+
+  .footer {
+    font-size: 12px;
+  }
+}
